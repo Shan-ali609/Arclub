@@ -1,0 +1,1191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav {
+    width: 100%;
+    color: black ;
+    background-color: rgb(237, 246, 255);
+    display: flex;
+    padding: 25px 10%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+nav h1 {
+    padding: 0px 50px ;
+    font-size: 30px;
+    font-weight: 800;
+}
+nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    justify-content: space-around;
+    gap: 50px;
+}
+nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+    font-weight: 400;
+}
+nav ul li a:hover{
+    color: black;
+    opacity: 1.5;
+}
+   
+.imburger {
+    font-size: 27px;
+    display: none;
+}
+.bar_active {
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width: 1024px) {
+    .imburger {
+        display: flex;
+        cursor: pointer;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.bar_active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        color: black;
+        position: absolute;
+        top: 90px;
+        padding: 20px 0px 28px 0px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: rgb(237, 246, 255);
+        animation: move 1.5s ease forwards; 
+    }
+}
+/* .bg{
+    width: 100%;
+    height: 1050px;
+    background-image: url('./pic/bg_1.jpg.webp');
+    background-attachment: local;
+    background-size: 100% 100%;
+    object-fit: cover;
+
+   
+}
+.data{
+    color: rgb(11, 11, 11);
+    padding: 13% 0px 0px 9%;
+    display: flex;
+    flex-direction: column; 
+    animation: moveup 1.5s ease forwards;   
+}
+@keyframes moveup {
+    0%{
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+.data h2{
+    font-size: 50px;
+    font-family: Arial  Bold, sans-serif;
+}
+.p1{
+    color: gray;
+    font-size: 22px;
+    padding: 20px 0px;
+}
+.btn-sec{
+ 
+         display: flex;
+         align-items: center;  
+         flex-wrap: wrap-reverse;
+}
+.btn-sec-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-sec button{
+    width: 140px;
+    height: 55px;
+    color: white;
+     cursor: pointer;
+     font-size: 15px;
+    background-color: #96bb7c;
+    font-weight: 700;
+    margin-left: 28px;
+}
+.play{
+     height: 55px;
+     width: 55px;
+     margin-left: 97px;
+     cursor: pointer;
+}
+.videolink{
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    text-align: center;
+} */
+
+.bg {
+    width: 100%;
+    height: 1050px;
+    background-image: url('./pic/bg_1.jpg.webp');
+    background-attachment: local;
+    background-size: 100% 100%;
+    object-fit: cover;
+}
+
+.data {
+    color: rgb(11, 11, 11);
+    padding: 13% 0px 0px 9%;
+    display: flex;
+    flex-direction: column;
+    animation: moveup 1.5s ease forwards;
+}
+
+@keyframes moveup {
+    0% {
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.data h2 {
+    font-size: 50px;
+    font-family: Arial, Bold, sans-serif;
+}
+
+.p1 {
+    color: gray;
+    font-size: 22px;
+    padding: 20px 0px;
+}
+
+.btn-sec {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.btn-sec-btn {
+    display: flex;
+    
+    align-items: center;
+}
+
+.btn-sec button {
+    width: 140px;
+    height: 55px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #96bb7c;
+    font-weight: 700;
+    margin-left: 28px;
+}
+
+.play {
+    height: 55px;
+    width: 55px;
+    margin-left: 97px;
+    cursor: pointer;
+}
+
+.videolink {
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bg {
+        height: 600px; /* Adjust the background height for smaller screens */
+    }
+
+    .data {
+        padding: 10% 5%;
+    }
+
+    .data h2 {
+        font-size: 36px; /* Reduce font size of the heading */
+    }
+
+    .p1 {
+        font-size: 18px; /* Adjust the font size of the paragraph */
+    }
+
+    .btn-sec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-sec-btn {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .btn-sec button {
+        width: 100%; /* Make buttons full-width on smaller screens */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add margin-top for spacing between buttons */
+    }
+
+    .play {
+        margin-left: 0; /* Remove margin-left for play button */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+
+    .videolink {
+        font-size: 18px; /* Reduce font size of the video link */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Ensure link is centered */
+        padding-top: 10px; /* Add padding-top for spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bg {
+        height: 500px; /* Further reduce height for extra small screens */
+    }
+
+    .data {
+        padding: 8% 4%; /* Adjust padding for extra small screens */
+    }
+
+    .data h2 {
+        font-size: 30px; /* Reduce font size for very small screens */
+    }
+
+    .p1 {
+        font-size: 16px; /* Reduce paragraph font size further */
+    }
+
+    .btn-sec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-sec button {
+        width: 100%; /* Full-width buttons */
+        margin-top: 12px;
+    }
+
+    .play {
+        margin-left: 0;
+        margin-top: 12px; /* More spacing between buttons on smaller screens */
+    }
+
+    .videolink {
+        font-size: 16px; /* Further reduce font size */
+        padding-top: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* next */
+
+.containercc{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #96bb7c;
+}                              
+.card{
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    
+    
+    color: #fffefe; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: move 1s ease forwards; 
+}
+.apple{
+    background-color:#90ba73;
+}
+.tomato{
+    background-color: #97c079;
+}
+@keyframes move {
+    0%{
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+.dit{
+    height: 90px;
+    width: 70px;
+    padding: 30px 30px;
+}
+.card h2{
+    font-size: 3rem;
+    padding: 30px 30px;
+    margin-top: auto;
+}
+.card p{
+    margin: 20px 0px 20px 0px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #fffefe;
+}
+.card button{
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    background-color: #96bb7c;
+    cursor: pointer;
+    border:1px solid #fffefe;
+    color: #fffefe;
+
+}
+/* @media (max-width: 1280px) {
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+@media(max-width:1024px){
+  .card{
+    width: calc(100%-20px);
+  }
+} */
+
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 25px;
+    gap: 25px;
+    margin-top: 25px;
+    
+}
+
+
+
+.infor{
+    height: 700px;
+    width: 550px;
+    color: #020202;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 30px 20px;
+    line-height: 1.5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: moveup 1.5s ease forwards;
+}
+.infor h1{
+    padding: 0px 0px 39px 0px;
+    font-size: 4.5rem;
+}
+.infor p{
+    line-height: 2.5;
+    word-spacing: 5px;
+}
+.mid{
+    height: 700px;
+    width: 550px;
+
+}
+.f-info{
+    color: #fffefe;
+    height: 700px;
+    width: 550px;
+    /* border: 2px solid rgb(254, 254, 254); */
+    overflow: hidden;
+    /* border: 2px solid #fffefe; */
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 15px;
+    background-image: url('./pic/light-bulbs-5488573_1920.jpg');
+    animation: moveup 1.5s ease forwards;
+}
+@keyframes slide {
+    0%{
+        transform:translateY(100);
+        opacity: 0;
+    }
+    100%{
+        transform:translatey(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.f-info input{
+    height: 39px;
+    outline: none;
+    font-size: 20px;
+    border:none;
+    color: #fffefe;
+    border-bottom: 2px solid #fffefe;
+    background-color: black;
+}
+.f-info select{
+    height: 30px;
+}
+.f-info button{
+    height: 50px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+   /* number counter */
+/* .c-sec{
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    justify-content: space-around;
+    padding: 60px 0px 60px 0px;
+    background-color: rgb(224, 225, 227);
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+    gap: 34px;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 25px;
+    
+   
+    
+}
+.dot{
+    height: 3rem;
+    margin-left: 35px;
+}
+.count{
+   
+    font-size: 4rem;
+}
+.c-sec p{
+    font-size: 2rem;
+} */
+.c-sec {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    justify-content: space-around;
+    padding: 60px 0px;
+    background-color: rgb(224, 225, 227);
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 34px;
+}
+
+/* Counter Section Styling */
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 25px;
+}
+
+.dot {
+    height: 3rem;
+    margin-left: 35px;
+}
+
+.count {
+    font-size: 4rem;
+}
+
+.c-sec p {
+    font-size: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .c-sec {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+        gap: 20px; /* Reduce gap between items */
+    }
+
+    .counter {
+        gap: 15px; /* Reduce gap between counters */
+        flex-direction: column; /* Stack counters vertically on small screens */
+    }
+
+    .dot {
+        height: 2.5rem; /* Adjust dot size for smaller screens */
+        margin-left: 20px; /* Reduce margin */
+    }
+
+    .count {
+        font-size: 3rem; /* Reduce font size of the counter numbers */
+    }
+
+    .c-sec p {
+        font-size: 1.5rem; /* Reduce font size of the paragraph */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-sec {
+        padding: 30px 15px; /* Further reduce padding for small screens */
+        gap: 15px; /* Reduce gap even further */
+    }
+
+    .counter {
+        gap: 10px; /* Smaller gap for counters */
+        flex-direction: column; /* Keep counters stacked vertically */
+    }
+
+    .dot {
+        height: 2rem; /* Further reduce dot size */
+        margin-left: 15px; /* Further reduce margin */
+    }
+
+    .count {
+        font-size: 2.5rem; /* Further reduce font size of the counter numbers */
+    }
+
+    .c-sec p {
+        font-size: 1.3rem; /* Reduce font size of the paragraph even more */
+    }
+}
+
+
+
+
+/* .pro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 254, 254);
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.pro p{
+    font-size: 2rem;
+}
+.pro h1{
+    font-size: 5rem;
+} */
+
+.pro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 254, 254);
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.pro p {
+    font-size: 2rem;
+}
+
+.pro h1 {
+    font-size: 5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .pro {
+        padding: 15px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .pro h1 {
+        font-size: 3.5rem; /* Reduce font size of h1 */
+    }
+
+    .pro p {
+        font-size: 1.8rem; /* Adjust font size of paragraph */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pro {
+        padding: 10px 5px; /* Further reduce padding for very small screens */
+    }
+
+    .pro h1 {
+        font-size: 2.5rem; /* Further reduce font size of h1 */
+    }
+
+    .pro p {
+        font-size: 1.5rem; /* Further reduce font size of paragraph */
+    }
+}
+
+
+/* 
+.pdata{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border: 2px solid rgb(252, 250, 250);
+    column-gap: 4rem;
+    animation: slide 3s ease forwards; 
+}
+.pdata h5{
+    font-size: 1rem;
+    
+}
+.pdata h1{
+    font-size: 3rem;
+    
+}
+
+.pimg{
+    height: 690px;
+    width: 510px;
+}
+.in-fo{
+    position: relative;
+    top: 50px;
+    line-height: 2;
+    overflow: hidden;
+    animation: moveup 1.5s ease forwards;
+}
+.in-fo h1{
+    font-size: 4rem;
+}
+.vertical-line{
+    width: 140px;
+    height: 2px;
+    background-color: black;
+   position: relative;
+   top: 0px;
+   left: -6rem;
+} */
+
+
+
+
+
+
+
+
+
+.pdata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border: 2px solid rgb(252, 250, 250);
+    column-gap: 4rem;
+    animation: slide 3s ease forwards;
+}
+
+.pdata h5 {
+    font-size: 1rem;
+}
+
+.pdata h1 {
+    font-size: 3rem;
+}
+
+.pimg {
+    height: 690px;
+    width: 510px;
+}
+
+.in-fo {
+    position: relative;
+    top: 50px;
+    line-height: 2;
+    overflow: hidden;
+    animation: moveup 1.5s ease forwards;
+}
+
+.in-fo h1 {
+    font-size: 4rem;
+}
+
+.vertical-line {
+    width: 140px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    top: 0px;
+    left: -6rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .pdata {
+        gap: 2rem; /* Reduce gap between items */
+        column-gap: 2rem; /* Reduce column gap */
+    }
+
+    .pdata h1 {
+        font-size: 2.5rem; /* Reduce font size of h1 */
+    }
+
+    .pdata h5 {
+        font-size: 0.9rem; /* Reduce font size of h5 */
+    }
+
+    .pimg {
+        height: 500px; /* Adjust image height for smaller screens */
+        width: 400px; /* Adjust image width for smaller screens */
+    }
+
+    .in-fo h1 {
+        font-size: 3rem; /* Reduce font size of h1 in in-fo */
+    }
+
+    .vertical-line {
+        width: 100px; /* Reduce width of vertical line */
+        left: -4rem; /* Adjust the position of the vertical line */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pdata {
+        gap: 1rem; /* Further reduce gap between items */
+        column-gap: 1rem; /* Further reduce column gap */
+    }
+
+    .pdata h1 {
+        font-size: 2rem; /* Further reduce font size of h1 */
+    }
+
+    .pdata h5 {
+        font-size: 0.8rem; /* Further reduce font size of h5 */
+    }
+
+    .pimg {
+        height: 400px; /* Further reduce image height */
+        width: 300px; /* Further reduce image width */
+    }
+
+    .in-fo h1 {
+        font-size: 2.5rem; /* Further reduce font size of h1 in in-fo */
+    }
+
+    .vertical-line {
+        width: 80px; /* Further reduce width of vertical line */
+        left: -3rem; /* Adjust the position of the vertical line */
+    }
+}
+
+/* pdatal Section */
+.pdatal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    column-gap: 4rem;
+    flex-wrap: wrap-reverse;
+    margin-top: 70px;
+    animation: moveup 3s ease forwards;
+}
+
+.in-fol {
+    line-height: 2;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.pdatal h5 {
+    font-size: 1rem;
+    display: flex;
+    justify-content: end;
+}
+
+.pdatal h1 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: end;
+}
+
+.pdatal p {
+    display: flex;
+    line-height: 1.5;
+    justify-content: end;
+}
+
+/* Responsive Design for pdatal */
+@media screen and (max-width: 1170px) {
+    .vertical-line {
+        opacity: 0; /* Hide the vertical line */
+    }
+
+    .pdata,
+    .pdatal {
+        max-width: 1000px;
+        box-shadow: 12px 8px 20px rgb(135, 134, 134);
+        padding-bottom: 30px;
+    }
+
+    .pdata img,
+    .pdatal img {
+        width: 100%; /* Make image width 100% */
+        object-fit: cover; /* Ensure image covers area without distortion */
+    }
+
+    .in-fo,
+    .in-fol {
+        position: relative;
+        top: 10px;
+        line-height: 1.5;
+        overflow: hidden;
+        animation: moveup 1.5s ease forwards;
+    }
+
+    .in-fo h1 {
+        font-size: 2rem; /* Reduce font size of h1 in in-fo */
+    }
+
+    .in-fol h1 {
+        font-size: 1rem; /* Reduce font size of h1 in in-fol */
+    }
+
+    .in-fo h5,
+    .in-fol h5 {
+        font-weight: bold; /* Make h5 bold */
+    }
+}
+
+/* Further responsiveness for smaller screens */
+@media screen and (max-width: 480px) {
+    .pdata,
+    .pdatal {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1.5rem; /* Adjust gap between items */
+    }
+
+    .pdata h1,
+    .pdatal h1 {
+        font-size: 1.8rem; /* Adjust font size of h1 */
+    }
+
+    .pdata h5,
+    .pdatal h5 {
+        font-size: 0.75rem; /* Adjust font size of h5 */
+    }
+
+    .pimg {
+        height: 300px; /* Reduce image height */
+        width: 100%; /* Make image full width */
+    }
+
+    .vertical-line {
+        width: 60px; /* Reduce width of vertical line */
+        left: 0; /* Align vertical line */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.h-b{
+    width: 100%;
+    background-color: aliceblue;
+    margin-top: 50px;
+}
+.h-kt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.h-kt h5{
+    font-size: 24px;
+}
+.h-kt h1{
+    font-size: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.crd-cont{
+    width: 100%;
+    text-align: center;
+   
+      display: flex;
+       gap: 35px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-wrap: wrap;
+      padding: 14px 0px; 
+    color: black;
+    margin-bottom: 100px;
+}
+.cardb{
+    width: 450px;
+    border: 2px solid rgb(253, 253, 253);
+    box-shadow: 0px 0px 10px rgb(236, 236, 237) ;
+    background-color: #fffefe;
+    margin-bottom: 100px;
+}
+.cardb p{
+    padding: 20px;
+}
+
+ .cardb img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+.i-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+}
+.name2{
+    font-size: 16px;
+    color: rgb(211, 211, 212);
+    
+}
+
+
+
+
+
+
+.plan{
+    /* background-color: rgb(189, 138, 70); */
+    width: 100%;
+    gap: 30px;
+    text-align: center;
+    padding: 50px;
+}
+.plan h1{
+    font-size: 5rem;
+}
+.pp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+}
+.pol{
+width: 400px;
+padding-bottom: 20px;
+box-shadow: 12px 8px 20px gray;
+
+}
+.pol img{
+width: 100%;
+height: 400px;
+}
+.con ul{
+list-style-type: none;
+}
+
+.c-con{
+ height: 20px;
+ width: 20px;
+ background-color: darkgray;
+ border-radius: 50%;
+    margin: 24px 10px 0px 19px;
+}
+
+
+.f-bg{
+    background-color: #020202;
+    width: 100%;
+    color: white;
+    margin-top: 40px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; */
+    padding-top: 90px;
+    padding-bottom: 50px;
+    
+}
+.heed-data{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   gap: 200px;
+   
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+
+}
+.first h1{
+    font-size: 19px;
+}
+.first p{
+    line-height: 2;
+}.dotb{
+    color: #fffefe;
+    height: 28px;
+    width: 28px;
+    padding: 0px 9px;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 53pxpx;
+}
+.second ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 66px;
+    list-style-type: none;
+}
+
+.Third {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 70px;
+   margin-top: -40px;
+}
+.Third ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 66px; */
+    gap: 42px;
+    list-style-type: none;
+}
+.four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 53pxpx;
+
+
+}
+ .four ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 66px;
+    list-style-type: none;
+}
+.five{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 70px;
+ 
+}
+.five ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 66px; */
+    gap: 42px;
+    list-style-type: none;
+}
+.daw{
+    /* height: 24px;
+    width: 24px; */
+    padding: 0px 0px 0px 10px;
+}
+.second, .Third, .four, .five ul li{
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.copy{
+    text-align: center;
+    padding-top: 150px;
+    
+}
+.right{
+    color: #97c079;
+}
